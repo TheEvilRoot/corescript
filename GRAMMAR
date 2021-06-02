@@ -1,0 +1,9 @@
+VAL_EXPR    :  LITERAL |
+               NAME    | 
+							 EXPR    |
+EXPR        :  VAL_EXPR [OPERATOR VAL_EXPR]
+IF_STMT     :  IF ( EXPR ) { CODE }
+VAL_DECL    :  VAR WORD = EXPR
+CODE        :  VAR_DECL |
+               IF_STMT  |
+							 EXPR     [CODE]
